@@ -54,37 +54,38 @@ function show_login(message) {
   $('#login-page').show()
 }
 
-function welcome_user(user, count) {
+function show_welcome(user, count) {
    $('#login-page').hide();
    $('#welcome-page').show();
    $('#welcome-message').html("Hello "+user+"<br>You have logged in "+count+" times.");
+   $('#welcome-message').css({"color":"blue"})
 }
 
 function handle_login_response(data, user) {
   if( data.errCode > 0 ) {
      c = data.count;
-     welcome_user(user, c);
+     show_welcome_page(user, c);
   } else {
      if( debug_flag ) {
         if( data.errCode != ERR_BAD_CREDENTIALS ) {
            alert( 'Illegal error code encounted for this state');
         }
      }
-     show_login( get_message_for_errcode(data.errCode) );  
+     show_login_page( get_message_for_errcode(data.errCode) );  
   }
 }
 
 function handle_add_user_response(data, user) {
   if( data.errCode > 0 ) {
      c = data.count;
-     welcome_user(user, c);
+     show_welcome_page(user, c);
   } else {
      if( debug_flag ) {
         if( data.errCode != ERR_BAD_USERNAME && data.errCode != ERR_USER_EXISTS ) {
            alert( 'Illegal error code encounted for this state');
         }
      }
-     show_login( get_message_for_errcode(data.errCode) );  
+     show_login_page( get_message_for_errcode(data.errCode) );  
   }
 }
 

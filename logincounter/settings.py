@@ -55,14 +55,14 @@ WSGI_APPLICATION = 'logincounter.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-
-"""DATABASES = {
+"""
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
     }
-}"""
-
+}
+"""
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
@@ -94,10 +94,10 @@ TEMPLATE_DIRS = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd3r0u58ugrthio',                      
-        'USER': 'cnykarvojemosh',
-        'PASSWORD': 'G5F6vIygDmxuXcz0l2CgfxwWZD',
-        'HOST': 'ec2-23-23-81-171.compute-1.amazonaws.com',
+        'NAME': 'd7ld73lolfbv1c',                      
+        'USER': 'wirrwguezjecyl',
+        'PASSWORD': 'zjSwS-4iDOYntEMYNapc5L2916',
+        'HOST': 'ec2-184-73-194-196.compute-1.amazonaws.com',
         'PORT': 5432
     }
 }
